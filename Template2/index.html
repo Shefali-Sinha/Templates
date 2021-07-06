@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+  <!--Font Awsome-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Title -->
+  <title>Bloomingdale's</title>
+
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+
+  <header>
+
+    <!-- Top Most Header-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="radio" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="radio" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="radio" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <div class="carousel-caption d-md-flex">
+            <p class="despriction">TAKE $25 OFF EVERY $100 YOU SPEND on items labeled TAKE $25 OFF.<a href="#"> INFO</a>
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="carousel-caption d-md-flex">
+            <p>The July 4th Sale: Save 30–50% on a large selection of items. Plus, save 65–75% on items labeled EXTRA
+              50% OFF CLEARANCE. </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-md-flex">
+            <p>CONTENT FOR THIRD SLIDER</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Central Header -->
+    <div class="Central-header">
+      <div class="central-wrapper">
+        <div class="central-wrapper-left"></div>
+        <div class="central-wrapper-right">
+          <a href="#">STORES & EVENTS</a>
+          <a href="#">SHOPPING SERVICES</a>
+          <a href="#">
+            <img src="image/IN.png" alt=""> <span class="countryname">INR</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Customization Window -->
+    <div class="center-header">
+      <div class="theme">
+        <label for="theme-select">Select Theme</label>
+        <select class="theme-control" onchange="applyTheme(event)">
+          <option value="#">Option</option>
+          <option value="#000000">Black</option>
+          <option value="#00FFFF">Cyan</option>
+          <option value="#00BFFF">Deep Skyblue</option>
+          <option value="#DCDCDC">Gainsboro</option>
+          <option value="#FFD700">Gold</option>
+          <option value="#FF69B4">Hotpink</option>
+          <option value="#F08080">Lightcoral</option>
+          <option value="#32CD32">limegreen</option>
+          <option value="#FFE4E1">Mistyrose</option>
+          <option value="#FF4500">Orangered</option>
+          <option value="#BC8F8F">Rosybrown</option>
+          <option value="#FF0000">Red</option>
+          <option value="#EE82EE">Violet</option>
+          <option value="#ffffff">White</option>
+        </select>
+      </div>
+      <div class="cfont-family">
+        <label for="cfont-family-select">Select Fonts</label>
+        <select class="cfont-family-control" id="cfont-family-select" onchange="applyFontFamily(event)">
+          <option value="#">Option</option>
+          <option value="'Open Sans', sans-serif">Open Sans</option>
+          <option value="'Anton', sans-serif">Anton</option>
+          <option value="'Alfa Slab One', cursive">Alfa Slab One</option>
+          <option value="'Big Shoulders Stencil Display', cursive">Big Shoulders</option>
+          <option value="'Bebas Neue', cursive">Bebas Neue</option>
+          <option value="'Bangers', cursive">Bangers</option>
+          <option value="'Bungee', cursive">Bungee</option>
+          <option value="'Black Han Sans', sans-serif">Black Han Sans</option>
+          <option value="'Dela Gothic One', cursive">Dela Gothic One</option>
+          <option value="'Dancing Script', cursive">Dancing Script</option>
+          <option value="'Days One', sans-serif">Days One</option>
+          <option value="'Fjalla One', sans-serif">Fjalla One</option>
+          <option value="'Fredoka One', cursive">Fredoka One</option>
+          <option value="'Gruppo', cursive">Gruppo</option>
+          <option value="'Holtwood One SC', serif">Holtwood</option>
+          <option value="'Jura', sans-serif">Jura</option>
+          <option value="'Roboto', sans-serif">Roboto</option>
+          <option value="'Ultra', serif">Ultra</option>
+          <option value="'Unica One', cursive">Unica One</option>
+          <option value="'Titan One', cursive">Titan One</option>
+        </select>
+      </div>
+      <div class="cfont-size">
+        <label for="cfont-size-select">Select Fonts</label>
+        <select class="cfont-size-control" id="cfont-size-select" onchange="applyFontSize(event)">
+          <option value="12px">Option</option>
+          <option value="12px">12</option>
+          <option value="14px">14</option>
+          <option value="16px">16</option>
+          <option value="18px">18</option>
+          <option value="20px">20</option>
+          <option value="22px">22</option>
+          <option value="24px">24</option>
+          <option value="26px">26</option>
+          <option value="28px">28</option>
+          <option value="30px">30</option>
+          <option value="32px">32</option>
+          <option value="34px">34</option>
+        </select>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- Content For Trial-->
+  <div class="fontsize-content" style="margin-top: 40px;">
+    <h2 style="text-align: center">Content to be changed</h2>
+    Why do we use it?</br>
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+    layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+    using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web
+    page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
+    sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
+    purpose (injected humour and the like).
+  </div>
+
+  <footer>
+
+    <div class="sigup-section">
+      <div class="container-signup-section">
+        <a href="#" class="sigup-section-link">
+          <div><i class="far fa-envelope"></i> </div>
+          <div>save 15%: </div>
+          <div>sign up for emails or texts!</div>
+        </a>
+        <div class="message-seperator"> | </div>
+        <div class="sigup-section-ship">Free shiping everyday! plus, free returns </div>
+        <div class="sigup-section-links"> loyallist: no minimum, everyone else: $150+
+          <p><a href="#">info/exclusions</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="main-footer">
+      <div class="container">
+        <div class="row main-footer-hidden">
+          <div class="col-md-3">
+            <h3 class="title">CUSTOMER SERVICE</h3>
+            <ul class="desc">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs & Help</a></li>
+              <li><a href="#">Visitor Services</a></li>
+              <li><a href="#">Domestic Site FAQs</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h3 class="title">YOUR ORDER</h3>
+            <ul class="desc">
+              <li><a href="#">Pay My Bill</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Loyallist Rewards</a></li>
+              <li><a href="#">Bloomingdale's Credit caerd</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h3 class="title">ABOUT BLOOMINGDALE'S</h3>
+            <ul class="desc">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">b.cause</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h3 class="title">WAYS TO SHOP</h3>
+            <ul class="desc">
+              <li><a href="#">In-store shopping services</a></li>
+              <li><a href="#">book an in-store or virtual appointment</a></li>
+              <li><a href="#">pickup and same day delivery</a></li>
+              <li><a href="#">chat with a stylist</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <h3 class="title">CUSTOMER SERVICE</h3>
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <ul class="desc">
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQs & Help</a></li>
+                  <li><a href="#">Visitor Services</a></li>
+                  <li><a href="#">Domestic Site FAQs</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <h3 class="title">YOUR ORDER</h3>
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <ul class="desc">
+                  <li><a href="#">Pay My Bill</a></li>
+                  <li><a href="#">Order Status</a></li>
+                  <li><a href="#">Loyallist Rewards</a></li>
+                  <li><a href="#">Bloomingdale's Credit caerd</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <h3 class="title">ABOUT BLOOMINGDALE'S</h3>
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <ul class="desc">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">b.cause</a></li>
+                  <li><a href="#">Careers</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                <h3 class="title">WAYS TO SHOP</h3>
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <ul class="desc">
+                  <li><a href="#">In-store shopping services</a></li>
+                  <li><a href="#">book an in-store or virtual appointment</a></li>
+                  <li><a href="#">pickup and same day delivery</a></li>
+                  <li><a href="#">chat with a stylist</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+              <h3>FOLLOW US </h3>
+              <div class="social-icons">
+                <a href="#"><i class="fas fa-mobile-alt"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sub-footer">
+      <ul class="sub-footer-links">
+        <li>
+          <a href="#">Terms of Use</a>
+        </li>
+        <li>
+          <a href="#">Privacy</a>
+        </li>
+        <li>
+          <a href="#">Do Not Sell My Personal Information</a>
+        </li>
+        <li>
+          <a href="#">CA Privacy Rights</a>
+        </li>
+        <li>
+          <a href="#">CA Transparency in Supply Chains Act</a>
+        </li>
+        <li>
+          <a href="#">Interest Based Ads</a>
+        </li>
+        <li>
+          <a href="#">Customers' Bill of Rights
+            </a>
+        </li>
+        <li>
+          <a href="#">Product Recall</a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="image/download.png" alt="">Essential Accessibility
+          </a>
+        </li>
+      </ul>
+      <div class="sub-footer-copyright">
+        © 2021 Bloomingdale's. 1000 Third Avenue New York, NY 10022. </br>
+        <a href="#">Request our corporate name and address.</a>
+      </div>
+    </div>
+    <div class="bonus-section">
+      <img src="https://assets.bloomingdales.com/feature/footer-bcom/latest/images/tagline.svg" alt="">
+    </div>
+    <div class="footer-bottom"></div>
+
+    <div class="back-to-top">
+      <div class="back-to-top-arrow"></div>
+    </div>
+
+  </footer>
+
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
