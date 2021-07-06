@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ========= Colors ========= */
+
+:root {
+    --grey: #cccccc;
+    --white: #fff;
+    --black: #000;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.web-issue {
+    position: fixed;
+    visibility: visible;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    bottom: 34px;
+    left: 0px;
+    width: 38px;
+}
+
+.web-issue-background {
+    background: rgb(118, 116, 116);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    position: relative;
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    z-index: -1;
+    writing-mode: vertical-rl;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.web-issue-background i {
+    transform: rotate(90deg);
+    padding-right: 12px;
+}
+
+header {
+    width: 100%;
+}
+
+.top-header {
+    background: var(--grey);
+    padding: 10px 20px;
+}
+
+.message-text-left {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.message-text-left a {
+    color: var(--black);
+}
+
+.email-mobile-content {
+    display: none;
+}
+
+.message-text-right {
+    text-align: right;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button.offer-component {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: underline;
+}
+
+button.offer-component:hover {
+    background: transparent;
+    color: var(--black);
+}
+
+span.arrow-icon {
+    font-size: 12px;
+}
+
+i.fas.fa-credit-card,
+i.fas.fa-envelope,
+i.fas.fa-info-circle {
+    padding-right: 5px;
+}
+
+.message-seperator {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+@media only screen and (max-width: 991px) {
+    .mobile-seperation,
+    .mobile-hidden-content {
+        display: none !important;
+    }
+    .message-seperator {
+        display: inline-block;
+        padding: 0 5px;
+    }
+}
+@media only screen and (max-width: 770px) {
+    .hidden-content {
+        display: none;
+    }
+
+    .email-mobile-content {
+        display: block;
+    }
+
+    .message-text-left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    a.mail-component {
+        display: flex;
+    }
+
+    .message-text-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .message-text-right {
+        display: none;
+    }
+
+    .message-text-left {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .col-sm-8.message-text-left {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* Customization Section */
+.center-header {
+    width: 100%;
+    display: flex;
+    padding: 17px 30px;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--defaultbackground);
+    box-shadow: 0px 0px 15px 0px var(--grey);
+}
+
+select {
+    min-width: 120px;
+}
+
+select:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 750px) {
+    .center-header {
+        flex-direction: column;
+    }
+    .theme,
+    .cfont-family,
+    .cfont-size {
+        width: 80%;
+        padding: 5px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    select {
+        overflow: hidden;
+        min-width: 160px;
+    }
+}
+
+/* Trial Section*/
+.fontsize-content {
+    width: 80%;
+    padding: 20px 30px;
+    margin: 10px auto;
+    border: 1px dotted var(--defaultbackground);
+    text-align: justify;
+}
+
+.content-box .label {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+.content-box ul {
+    list-style: none;
+}
+.content-box ul li {
+    padding-bottom: 10px;
+}
+.content-box ul li a {
+    color: #222;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 916px) {
+    .accordion {
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .accordion .content-box {
+        position: relative;
+        margin: 10px 20px;
+        max-width: 800px;
+    }
+    .accordion .content-box .label {
+        position: relative;
+        padding: 10px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+    }
+    .accordion .content-box .label::before {
+        content: '+';
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 1.5em;
+    }
+    .accordion .content-box ul {
+        position: relative;
+        max-height: 0px;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .accordion .content-box.active ul {
+        max-height: 300px;
+    }
+}
+.social-icon {
+    text-align: right;
+    float: right;
+    padding: 0 25% 16px 0;
+    margin-right: auto;
+}
+.social-icon h4 {
+    font-size: 18px;
+    font-weight: 500;
+    float: left;
+    line-height: 32px;
+    padding-right: 16px;
+    text-transform: uppercase;
+}
+.social-icon a  {
+    text-decoration: none;
+    padding-right: 2px;
+    float: left;
+    padding: 3px 7px;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 50%;
+    margin: 0 5px;
+    font-size: 14px;
+}
+.sub-footer-container {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    padding: 20px 0;
+}
+.sub-footer-container .col-xs-4 {
+    width: 33.33333333%;
+}
+.sub-footer-container .text-center a {
+    color: #222;
+    font-size: 14px;
+}
+.second-bonus-section {
+    padding-top:  20px;
+}
+.accessibility-logo img {
+    height: 80px;
+}
+.accessibility a {
+    color: #000;
+    font-size: 16px;
+}
+.accessibility p {
+    font-size: 12px;
+    color: #222;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.footer-copyright p,
+.footer-badges {
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+}
